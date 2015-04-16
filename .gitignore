@@ -33,4 +33,7 @@ config/database.yml
 bower.json
 
 # Ignore pow environment settings
-.powenv
+. powenv
+
+public/spree/
+
