@@ -35,5 +35,9 @@ module OmiseSpree
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.after_initialize do
+      Rails.configuration.spree.payment_methods << Spree::Gateway::OmiseGateway
+    end
   end
 end
