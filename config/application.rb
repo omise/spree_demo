@@ -19,6 +19,11 @@ module OmiseSpree
       Dir.glob(File.join(File.dirname(__FILE__), "../app/overrides/*.rb")) do |c|
         Rails.configuration.cache_classes ? require(c) : load(c)
       end
+
+      # Load Spree overwrites
+      Dir.glob(File.join(File.dirname(__FILE__), "../app/models/**/*.rb")) do |c|
+        Rails.configuration.cache_classes ? require(c) : load(c)
+      end
     end
 
     # Settings in config/environments/* take precedence over those specified here.
