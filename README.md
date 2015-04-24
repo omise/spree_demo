@@ -1,6 +1,10 @@
 # Spree Ecommerce Demo with Omise
 
-This a Spree Rails application using Omise ActiveMerchant gateway plugin
+This a Spree Rails application using Omise ActiveMerchant gateway plugin.
+
+Tested with Spree version 1.47.0, which uses our Omise ActiveMerchant branch [omise-1.47.0](https://github.com/omise/active_merchant/tree/omise-1.47.0) 
+
+We plan to send a PR to mainstream ActiveMerchant at some point.
 
 ## Instructions
 
