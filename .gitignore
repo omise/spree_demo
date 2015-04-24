@@ -37,3 +37,4 @@ bower.json
 
 public/spree/
 
+*.DS_Store

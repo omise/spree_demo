@@ -42,7 +42,7 @@ module OmiseSpree
     config.active_record.raise_in_transactional_callbacks = true
 
     config.after_initialize do
-      Rails.configuration.spree.payment_methods << Spree::Gateway::OmiseGateway
+      Rails.configuration.spree.payment_methods << Spree::Gateway::Omise
     end
   end
 end
