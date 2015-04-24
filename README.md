@@ -1,20 +1,26 @@
 # Spree Ecommerce Demo with Omise
 
-This a Spree railsapplication using Omise ActiveMerchant gateway plugin
+This a Spree Rails application using Omise ActiveMerchant gateway plugin
 
 ## Instructions
 
 ### Setup
 
 ```
+git clone git@github.com:omise/spree_demo.git
+cd spree_demo
 bundle install
 cp config/database.yml.sample config/database.yml
+bundle exec rake db:create
 bin/rake railties:install:migrations
-bin/rake db:create
 bin/rake db:migrate
 bin/rake db:seed
 bin/rake spree_sample:load
+bin/rake secret
 ```
+copy the output from `bin/rake secret` command
+and set it as a value of `secret_key_base` key in config/secrets.yml for a running environment
+( more details http://guides.rubyonrails.org/upgrading_ruby_on_rails.html#config-secrets-yml )
 
 ### Start Server
 
@@ -22,9 +28,21 @@ bin/rake spree_sample:load
 bin/rails server
 ```
 
-
 ### Configure
 
-Navigate admin and payment menthods, and your private key and secret key accordingly.
+Navigate to admin page and do the following:
+
+1. Set default currency as a Thai Baht in Currency Settings
+
+![Currency Settings](https://omise-cdn.s3.amazonaws.com/assets/spree/currency.png)
+
+2. Add a new Payment Method, go to Configurations > Payment Methods (/admin/payment_methods/new)
+
+![Add New Payment](https://omise-cdn.s3.amazonaws.com/assets/spree/add_new_payment.png)
+
+3. Edit Payment Method and add your API Keys
+
+![Add API Keys](https://omise-cdn.s3.amazonaws.com/assets/spree/set_keys.png)
 
 
+And your customers can now checkout with Omise Payment Gateway.
