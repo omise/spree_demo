@@ -1,5 +1,5 @@
 <%= render "spree/checkout/payment/gateway", payment_method: payment_method %>
-<script src="https://cdn.omise.co/omise.js"></script>
+<script src="https://cdn.omise.co/omise.min.js.gz"></script>
 <script>
   Omise.setPublicKey("<%= payment_method.preferred_public_key %>");
 </script>
