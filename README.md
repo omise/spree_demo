@@ -4,6 +4,13 @@ This a Spree Rails application using Omise ActiveMerchant gateway plugin
 
 ## Instructions
 
+### Features
+
+1. Create a token using Omise.js and charge the card using token.
+2. Use token to save customer on database and charge the card anytime (Spree Card Profile)
+3. Full Void
+4. Partial Refunds
+
 ### Setup
 
 ```
