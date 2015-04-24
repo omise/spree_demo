@@ -57,3 +57,6 @@ Navigate to admin page and do the following:
 
 
 And your customers can now checkout with Omise Payment Gateway.
+
+![Checkout](https://omise-cdn.s3.amazonaws.com/assets/spree/checkout.png)
+![Checkout](https://omise-cdn.s3.amazonaws.com/assets/spree/succeed_order.png)
