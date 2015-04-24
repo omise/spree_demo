@@ -10,6 +10,7 @@ This a Spree railsapplication using Omise ActiveMerchant gateway plugin
 bundle install
 cp config/database.yml.sample config/database.yml
 bin/rake railties:install:migrations
+bin/rake db:create
 bin/rake db:migrate
 bin/rake db:seed
 bin/rake spree_sample:load
