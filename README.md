@@ -17,6 +17,16 @@ We plan to send a PR to mainstream ActiveMerchant at some point.
 
 ### Setup
 
+If you already have a Spree store, just add the following to Gemfile
+
+```ruby
+# For spree version 3.0.0
+gem 'activemerchant', github: 'omise/active_merchant', branch: 'omise-1.47.0'
+gem 'spree-omise', github: 'omise/spree-omise'
+```
+
+To start with a fresh store:
+
 ```
 git clone git@github.com:omise/spree_demo.git
 cd spree_demo
